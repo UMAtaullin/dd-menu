@@ -22,6 +22,9 @@ nav {
   background-color: blueviolet;
   color: white;
   padding: 1em;
+
+  top: 0;
+  position: sticky;
 }
 
 aside {
