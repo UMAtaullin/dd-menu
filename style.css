@@ -47,3 +47,17 @@ footer {
   color: white;
   padding: 2em;
 }
+
+@media(max-width:800px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  aside {
+    position: fixed;
+    width: 300px;
+    display: none;
+  }
+  .show{
+    display: block;
+  }
+}
