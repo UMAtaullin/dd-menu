@@ -8,33 +8,101 @@
   <script type="text/javascript" src="app.js" defer></script>
 </head>
 <body>
-  <nav>
-    <button onclick="toggleSidebar()">btn</button>
-    Navbar
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <span class="logo">UMA</span>
+        <button 
+          id="toggle-btn"
+          onclick="toggleSidebar(this)">
+          <img src="static/img/keyboard_double_arrow_left.svg" alt="">
+        </button>
+      </li>
+      <li class="active">
+        <a href="index.html">
+          <img src="static/img/home.svg" alt="">
+          Home
+        </a>
+      </li>
+      <li class="active">
+        <a href="dashboard.html">
+          <img src="static/img/dashboard.svg" alt="">
+          Dashboard
+        </a>
+      </li>
+
+      <!-- код для одного выпадающего меню -->
+      <li>
+        <button 
+          class="dropdown-btn" 
+          onclick="toggleSubMenu(this)">
+          <img src="static/img/create_new_folder.svg" alt="">
+          <span>Create</span>
+          <img src="static/img/keyboard_arrow_down.svg" alt="">
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Folder</a></li>
+            <li><a href="#">Document</a></li>    
+            <li><a href="#">Project</a></li>        
+          </div>
+        </ul>
+      </li>
+      <!-- код для одного выпадающего меню -->
+      <!-- код для одного выпадающего меню -->
+      <li>
+        <button 
+          class="dropdown-btn" 
+          onclick="toggleSubMenu(this)">
+          <img src="static/img/checklist.svg" alt="">
+          <span>Todo-List</span>
+          <img src="static/img/keyboard_arrow_down.svg" alt="">
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Private</a></li>
+            <li><a href="#">Coding</a></li>
+            <li><a href="#">Gardening</a></li>
+            <li><a href="#">School</a></li>
+          </div>
+        </ul>
+      </li>
+      <!-- код для одного выпадающего меню -->
+
+      <li class="active">
+        <a href="calendar.html">
+          <img src="static/img/calendar.svg" alt="">
+          Calendar
+        </a>
+      </li>
+      <li class="active">
+        <a href="profile.html">
+          <img src="static/img/account_circle.svg" alt="">
+          Profile
+        </a>
+      </li>
+    </ul>
   </nav>
-  <aside id="sidebar">Sidebar</aside>
+
   <main>
-    <h1>Практика по JavaScript</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus assumenda ullam recusandae ea illo pariatur qui, officiis dignissimos nobis corrupti animi, id vel, aliquid voluptas voluptatem voluptate? Ea, eaque.</p>
+    <div class="container">
+      <h2>Hello World</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nobis obcaecati quidem officiis similique mollitia quae illo!</p>
+    </div>
+    <div class="container">
+      <h2>Example Heading</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nobis obcaecati quidem officiis similique mollitia quae illo! Dolore totam quae, voluptatem aperiam consectetur repellat excepturi alias, provident perferendis nulla saepe.</p>
+    </div>
+    <div class="container">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nobis obcaecati quidem officiis similique mollitia quae illo! Dolore totam quae, voluptatem aperiam consectetur repellat excepturi alias, provident perferendis nulla saepe.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis temporibus soluta iure nesciunt hic earum aspernatur distinctio alias similique, minima incidunt error placeat vitae officiis architecto commodi sunt? Velit, illo!
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nobis obcaecati quidem officiis similique mollitia quae illo! Dolore totam quae, voluptatem aperiam consectetur repellat excepturi alias, provident perferendis nulla saepe.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis temporibus soluta iure nesciunt hic earum aspernatur distinctio alias similique, minima incidunt error placeat vitae officiis architecto commodi sunt? Velit, illo!
+      </p>
+    </div>
   </main>
-  <footer>Footer</footer>
+
 </body>
 </html>
